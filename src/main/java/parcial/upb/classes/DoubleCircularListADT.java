@@ -59,6 +59,7 @@ public class DoubleCircularListADT implements IListable {
         }
     }
     
+    
     public String print() {
 
         Node current = first;
@@ -71,5 +72,27 @@ public class DoubleCircularListADT implements IListable {
 
         return result;
 
+    }
+
+    @Override
+    public void delete(Node node) {
+        Node current = first;
+        Node previous = last;
+        do{
+            if(current == first){
+                first.setNext(first);
+                last.setNext(first);
+                first.setPrevious(last);
+                
+            } else if (current == last){
+                last = previous;
+                first.setPrevious(last);
+                last.setNext(first);
+                
+            } else {
+                
+            }
+        }
+        
     }
 }

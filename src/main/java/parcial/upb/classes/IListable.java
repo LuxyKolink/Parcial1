@@ -12,5 +12,6 @@ package parcial.upb.classes;
 public interface IListable {
     
     public void add(Node node);
+    public void delete(Node node);
     
 }
