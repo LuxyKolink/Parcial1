@@ -21,6 +21,16 @@ public class Node<T extends Comparable>{
         this.value = value;
     }
 
+    public Node(Node<T> next, T value) {
+        this.next = next;
+        this.value = value;
+    }
+
+    public Node(T value) {
+        this.value = value;
+    }
+    
+
     public Node<T> getNext() {
         return next;
     }

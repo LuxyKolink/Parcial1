@@ -11,5 +11,4 @@ package parcial.upb.classes;
  */
 public class ParkingLot {
 
-    
 }
