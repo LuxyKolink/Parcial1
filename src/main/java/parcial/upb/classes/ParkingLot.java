@@ -5,10 +5,12 @@
  */
 package parcial.upb.classes;
 
+
 /**
  *
  * @author santi
  */
-public class ParkingLot {
+public class ParkingLot <T extends Comparable <T> >{
+
 
 }

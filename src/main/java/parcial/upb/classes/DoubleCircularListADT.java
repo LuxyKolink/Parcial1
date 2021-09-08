@@ -46,19 +46,16 @@ public class DoubleCircularListADT implements IListable {
         
         if (first == null){
             first = node;
+            last = node;
             first.setNext(first);
             first.setPrevious(last);
-            last = node;
-            
         } else {
+            last.setNext(node);
+            node.setNext(first);
+            node.setPrevious(last);
+            last = node;
+            first.setPrevious(last);
             
-            while (current.getNext() != first){
-                
-                node.setNext(current.getNext());
-                    current.setNext(node);
-                    break;
-            }
-            current = current.getNext();
         }
     }
     
