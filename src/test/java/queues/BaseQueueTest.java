@@ -48,5 +48,6 @@ public abstract class BaseQueueTest {
         q.enqueue(message);
         int size = q.size();
         assertEquals(q.peek(), message);
+        assertEquals(q.size(), size);
     }
 }

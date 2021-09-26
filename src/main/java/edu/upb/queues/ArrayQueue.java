@@ -28,27 +28,52 @@ public class ArrayQueue implements IQueue {
             throw new MyException("Cannot add to full queue.");
         }
         
-        
+        array[tail] = item;
+        tail++;
+        size++;
     }
 
     @Override
     public Object dequeue() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        if (size == 0){
+            throw new MyException("Cannot remove from empty queue.");
+        }
+        
+        Object item = array[head];
+        
+        for (int i = 0; i < tail - 1; i++){
+            array[i] = array[i + 1];
+        }
+        
+        array[tail - 1] = null;
+        tail--;
+        
+        return item;
     }
 
     @Override
     public Object peek() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        if (size == 0){
+            throw new MyException("Cannot peek from empty queue.");
+        }
+        
+        return array[size - 1];
     }
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        return size;
+        
     }
 
     @Override
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        return size == 0;
+        
     }
 
 }
