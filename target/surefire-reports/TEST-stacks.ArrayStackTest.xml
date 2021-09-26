@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="stacks.ArrayStackTest" time="0.023" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="stacks.ArrayStackTest" time="0.026" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="16.0.2+7-67"/>
@@ -14,6 +14,7 @@
     <property name="user.script" value=""/>
     <property name="user.country" value="CO"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="test" value="stacks.**.*Test"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\santi\OneDrive\Documentos\NetBeansProjects\StacksAndQueues-master"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
@@ -44,7 +45,7 @@
     <property name="java.class.path" value="C:\Program Files\NetBeans-12.4\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="16"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.4\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=stacks.**.*Test -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.4\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-16.0.2"/>
     <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -62,9 +63,9 @@
   <testcase classname="stacks.ArrayStackTest" name="testPushToFullStack" time="0.019"/>
   <testcase classname="stacks.ArrayStackTest" name="testPushThenPop" time="0"/>
   <testcase classname="stacks.ArrayStackTest" name="testNewStackIsEmpty" time="0"/>
-  <testcase classname="stacks.ArrayStackTest" name="testPushesToEmptyStack" time="0"/>
+  <testcase classname="stacks.ArrayStackTest" name="testPushesToEmptyStack" time="0.001"/>
   <testcase classname="stacks.ArrayStackTest" name="testPushThenPeek" time="0"/>
-  <testcase classname="stacks.ArrayStackTest" name="testPoppingDownToEmpty" time="0.003"/>
+  <testcase classname="stacks.ArrayStackTest" name="testPoppingDownToEmpty" time="0.005"/>
   <testcase classname="stacks.ArrayStackTest" name="testPopOnEmptyStack" time="0"/>
   <testcase classname="stacks.ArrayStackTest" name="testPeekIntoEmptyStack" time="0.001"/>
 </testsuite>
