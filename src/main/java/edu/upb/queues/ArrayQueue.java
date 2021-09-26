@@ -5,6 +5,7 @@
  */
 package edu.upb.queues;
 import edu.upb.models.IQueue;
+import edu.upb.models.MyException;
 
 /**
  *
@@ -22,7 +23,12 @@ public class ArrayQueue implements IQueue {
 
     @Override
     public void enqueue(Object item) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        if (size == array.length){
+            throw new MyException("Cannot add to full queue.");
+        }
+        
+        
     }
 
     @Override
