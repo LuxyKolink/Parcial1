@@ -1,0 +1,9 @@
+edu\upb\stacks\ArrayStack.class
+edu\upb\stacks\LinkedStack.class
+edu\upb\models\IQueue.class
+edu\upb\models\MyException.class
+edu\upb\main\Main.class
+edu\upb\queues\ArrayQueue.class
+edu\upb\models\Node.class
+edu\upb\models\IStack.class
+edu\upb\queues\LinkedQueue.class
