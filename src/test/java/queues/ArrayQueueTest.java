@@ -5,16 +5,29 @@
  */
 package queues;
 
+import edu.upb.models.MyException;
+import edu.upb.queues.ArrayQueue;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
  * @author santi
  */
-public class ArrayQueueTest {
+public class ArrayQueueTest extends BaseQueueTest{
+    private static final int CAPACITY = 40;
     
-    public ArrayQueueTest() {
+    @Before
+    public void makeBoundedQueue() {
+        q = new ArrayQueue(CAPACITY);
+    }
+    
+    @Test(expected = MyException.class)
+    public void testEnqueueToFullQueue() {
+        for (int i = 0; i < CAPACITY; i++) {
+            q.enqueue("Element "+i);
+        }
+        q.enqueue("abc");
     }
     
 }

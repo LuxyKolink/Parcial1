@@ -6,6 +6,7 @@
 package queues;
 
 import edu.upb.models.IQueue;
+import edu.upb.models.MyException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -49,5 +50,30 @@ public abstract class BaseQueueTest {
         int size = q.size();
         assertEquals(q.peek(), message);
         assertEquals(q.size(), size);
+    }
+    
+    @Test
+    public void testDequeuingDownToEmpty() {
+        int numberOfInserts = (int) (Math.random() * 20 + 1);
+        for (int i = 0; i < numberOfInserts; i++) {
+            q.enqueue("zzz");
+        }
+        for (int i = 0; i < numberOfInserts; i++) {
+            q.dequeue();
+        }
+        assertTrue(q.isEmpty());
+        assertEquals(q.size(), 0);
+    }
+    
+    @Test(expected = MyException.class)
+    public void testDequeueOnEmptyQueue() {
+        assertTrue(q.isEmpty());
+        q.dequeue();
+    }
+    
+    @Test(expected = MyException.class)
+    public void testPeekIntoEmptyQueue() {
+        assertTrue(q.isEmpty());
+        q.peek();
     }
 }
